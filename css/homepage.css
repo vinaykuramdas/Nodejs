@@ -1,0 +1,416 @@
+html{
+    width: 100%;
+}
+body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+    color:orangered;
+}
+#navgate{
+	margin-bottom: 0px;
+}
+.navbar {
+    margin-bottom: 0;
+    background-color:orangered;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+.navbar ul.dropdown-menu{
+    background-color: orangered;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color:#fff !important;
+}
+.outer{
+background-color:aquamarine;
+height: 100px;
+width: 100%;
+
+}
+
+.outer img{
+    height: 100px;
+}
+.outer h2{
+font-style:italic;
+color:red;
+margin-left:1200px;
+}
+
+.outer p{
+color:green;
+font-weight:bold;
+margin-left:1130px
+
+}
+@media (max-width: 768px) {
+  nav ul.navbar-menu {
+      display: none;
+  }
+
+  nav button {
+      display: block;
+  }
+}
+
+.btn-group{
+padding:7px;
+color:white;
+}
+
+.btn-group ul{
+background-color:green;
+}
+
+.btn-log{
+    margin-top: 15px;
+}
+
+.btn-log:hover{
+background-color:red;
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  width: 100%;
+}
+@media only screen and (min-width: 600px) {
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+.matter p{
+background-color:lightblue;
+word-spacing:10px;
+}
+
+#contact{
+background-color:aliceblue;
+}
+
+html{
+height:100%;
+}
+.outer.scrollUp{
+transform: translateY(300px);
+}
+
+#about{
+background-color:coral;
+}
+
+.copyright{
+background-color:#373737;
+}
+.copyright p{
+    margin: 0 0 10px;
+    color: white;
+    font-size: 16px;
+}
+#bikes{
+background-color:teal;
+}
+#cars{
+background-color:aqua;
+}
+.createemployee{
+    margin-left: 18px;
+    height: 8px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+.generic-anchor {
+	color: #8DB9ED;
+}
+
+.generic-anchor:visited {
+	color: #8DB9ED;
+}
+
+.generic-anchor:hover {
+	color: #ccc;
+}
+
+.flex-rw {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+main {
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font: 10em "Oswald", sans-serif;
+	color: #9b9b9b;
+	line-height: 1;
+}
+
+footer {
+	background: #373737;
+	margin-top: auto;
+	width: 100%;
+}
+
+.footer-list-top {
+	width: 33.333%;
+}
+
+.footer-list-top > li {
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.footer-list-header {
+	padding: 10px 0 5px 0;
+	color: #fff;
+	font: 2.3vw "Oswald", sans-serif;
+}
+
+.footer-list-anchor {
+	font: 1.3em "Open Sans", sans-serif;
+}
+
+.footer-social-section {
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+	margin-top: 5px;
+}
+
+.footer-social-section::after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 10px;
+	border-top: 1px solid #ccc;
+	width: calc(100% - 20px);
+}
+
+.footer-social-overlap {
+	position: relative;
+	z-index: 2;
+	background: #373737;
+	padding: 0 20px;
+}
+
+.footer-social-connect {
+	display: flex;
+	align-items: center;
+	font: 3.5em "Oswald", sans-serif;
+	color: #fff;
+}
+
+.footer-social-small {
+	font-size: 0.6em;
+	padding: 0px 20px;
+}
+
+.footer-social-overlap > a {
+	font-size: 3em;
+}
+
+.footer-social-overlap > a:not(:first-child) {
+	margin-left: 0.38em;
+}
+
+.footer-bottom-section {
+	width: 100%;
+	padding: 10px;
+	border-top: 1px solid #ccc;
+	margin-top: 10px;
+}
+
+.footer-bottom-section > div:first-child {
+	margin-right: auto;
+}
+
+.footer-bottom-wrapper {
+	font-size: 1.5em;
+	color: #fff;
+}
+
+.footer-address {
+	display: inline;
+	font-style: normal;
+}
+
+@media only screen and (max-width: 768px) {
+	.footer-list-header {
+		font-size: 2em;
+	}
+
+	.footer-list-anchor {
+		font-size: 1.1em;
+	}
+
+	.footer-social-connect {
+		font-size: 2.5em;
+	}
+
+	.footer-social-overlap > a {
+		font-size: 2.24em;
+	}
+
+	.footer-bottom-wrapper {
+		font-size: 1.3em;
+	}
+}
+
+@media only screen and (max-width: 568px) {
+	main {
+		font-size: 5em;
+	}
+
+	.footer-list-top {
+		width: 100%;
+	}
+
+	.footer-list-header {
+		font-size: 3em;
+	}
+
+	.footer-list-anchor {
+		font-size: 1.5em;
+	}
+
+	.footer-social-section {
+		justify-content: center;
+	}
+
+	.footer-social-section::after {
+		top: 25%;
+	}
+
+	.footer-social-connect {
+		margin-bottom: 10px;
+		padding: 0 10px;
+	}
+
+	.footer-social-overlap {
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer-social-icons-wrapper {
+		width: 100%;
+		padding: 0;
+	}
+
+	.footer-social-overlap > a:not(:first-child) {
+		margin-left: 20px;
+	}
+
+	.footer-bottom-section {
+		padding: 0 5px 10px 5px;
+	}
+
+	.footer-bottom-wrapper {
+		text-align: center;
+		width: 100%;
+		margin-top: 10px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.footer-social-overlap > a {
+		margin: auto;
+	}
+
+	.footer-social-overlap > a:not(:first-child) {
+		margin-left: 0;
+	}
+
+	.footer-bottom-rights {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.footer-list-header {
+		font-size: 2.2em;
+	}
+
+	.footer-list-anchor {
+		font-size: 1.2em;
+	}
+
+	.footer-social-connect {
+		font-size: 2.4em;
+	}
+
+	.footer-social-overlap > a {
+		font-size: 2.24em;
+	}
+
+	.footer-bottom-wrapper {
+		font-size: 1.3em;
+	}
+}
+
+.sticky {
+	position: fixed;
+	background-color:orangered;
+    width: 100%;
+	left: 0;
+	right: 0;
+    top: 0;
+    z-index: 100;
+	border-top: 0;
+	
+}
+#click{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 25px;
+}

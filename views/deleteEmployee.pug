@@ -1,0 +1,12 @@
+html
+  head
+  title DeleteEmployee
+  link(rel='stylesheet', href='deleteEmployee.css',type = 'text/css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  body
+   form(action='/deleted',method='POST')
+     input(type='text', placeholder='Type for EmployeeId...',name='delete',required='required')
+     button.btn(type='submit') Delete
+    
+

@@ -1,0 +1,306 @@
+html
+head
+  title  Vinay HomePage
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  link(rel='stylesheet', href='homepage.css',type = 'text/css')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+  link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
+  link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet', type='text/css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  script.
+    function confirmbox(){
+      var log = confirm("Are you sure want to logout?");
+      if(log){
+        window.location='/logout';
+      return true;
+      }else{
+      return false;
+      }
+      }
+    $(document).ready(function() {
+    var stickyNavTop = $('.container').offset().top;
+
+   var stickyNav = function(){
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop > stickyNavTop) { 
+      $('.container').addClass('sticky');
+    } else {
+      $('.container').removeClass('sticky'); 
+    }
+   };
+
+   stickyNav();
+
+   $(window).scroll(function() {
+    stickyNav();
+   });
+   });
+body  
+ .outer
+  <img src='logo.PNG' >
+  
+ nav.navbar#navgate
+  .container
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='#myPage') V&R LIMITED
+    #myNavbar.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='#about') ABOUT
+        li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+              | SERVICES 
+              span.caret
+            ul.dropdown-menu(role='menu')
+             li
+              form.createemployee(action = "/createemployee", method = "GET")
+               a(href='createemployee') Create Employee
+             li
+              a(href='fetchemployee') Fetch Employee
+             li
+              a(href='updateemployee') Update Employee
+             li
+              a(href='deleteemployee') Delete Employee  
+        li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+              | PRODUCTS 
+              span.caret
+            ul.dropdown-menu(role='menu')
+             li
+              a(href='#bikes') Bikes
+             li
+              a(href='#cars') Cars
+             li
+              a(href='#aero') Aerospace
+             li.divider 
+             li
+              a(href='#about') About us       
+        li
+          a(href='#contact') CONTACT
+        li
+          form(action = "/logout", method = "GET")
+           a(href='logout')
+             button.btn-log(type='button',onclick='return confirmbox()')
+              span.glyphicon.glyphicon-off
+              |  Logout
+ #cars.row
+  p
+    | A 
+    strong
+      | sports car, or sportscar, is a small, usually two-seater, two-door automobile designed for spirited performance and nimble handling
+    |   The front-engine, rear-wheel-drive layout (FR) is common to sports cars of any era and has survived longer in sports cars than in mainstream automobiles. Examples include the Caterham 7, Mazda MX-5, and the Chevrolet Corvette. More specifically, many such sports cars have a front mid-engine, rear-wheel drive layout (FMR), with the centre of mass of the engine between the front axle and the firewall
+  .carousel(<div='')
+    #myCarousel.carousel.slide(data-ride='carousel')
+      // Indicators
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+      // Wrapper for slides
+      .carousel-inner
+        .item.active
+          img(src='http://www.astroautoglass.net/wp-content/uploads/2018/01/slide1-1200x420.jpg', alt='Los Angeles', style='width:100%')
+          .carousel-caption
+            a(href='http://www.audi.in/in/web/en.html',target='_blank')#click ClickHere
+            h3 Audi
+            p Always so much fun!
+        .item
+          img(src='http://www.astroautoglass.net/wp-content/uploads/2018/01/slide4-1200x420.jpg', alt='Chicago', style='width:100%')
+          .carousel-caption
+            a(href='https://www.tesla.com/',target='_blank')#click ClickHere
+            h3 Tesla
+            p Thank you, Tesla!
+        .item
+          img(src='https://images.pellonmotorgroup.co.uk/carousel/image/183792/resized-shutterstock_162411114.jpg', alt='New York', style='width:100%')
+          .carousel-caption
+            a(href='https://www.bmw.in/en/all-models.html',target='_blank')#click ClickHere
+            h3 BMW
+            p We love BMW!
+      // Left and right controls
+      a.left.carousel-control(href='#myCarousel', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left
+        span.sr-only Previous
+      a.right.carousel-control(href='#myCarousel', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
+        span.sr-only Next
+ #bikes.row
+  .col-6.col-s-3.menu
+    .matter
+      p
+        strong V&R, Inc. Bikes
+        |   optimized for speed, acceleration, braking, and cornering on paved roads, typically at the expense of comfort and fuel economy by comparison with other motorcycles. Soichiro Honda wrote in the owner's manual of the 1959 Honda CB92 Benly Super Sport that, "Primarily, essentials of the motorcycle consists in the speed and the thrill," while Cycle World's Kevin Cameron says that, "A sportbike is a motorcycle whose enjoyment consists mainly from its ability to perform on all types of paved highway – its cornering ability, its handling, its thrilling acceleration and braking power, even (dare I say it?) its speed."
+      p
+        | Motorcycles are versatile and may be put to many uses as the rider sees fit. In the past there were few if any specialized types of motorcycles, but the number of types and sub-types has proliferated, particularly in the period since the 1950s.
+        | This was followed in the 1970s by improvements in suspension and braking commensurate with the power of the large inline fours that had begun to dominate the sport bike world. In the 1980s sport bikes again took a leap ahead, becoming almost indistinguishable from racing motorcycles. Since the 1990s sport bikes have become more diverse, adding new variations like the naked bike and streetfighter to the more familiar road racing style of sport bike.
+      p
+        | Braking systems combine higher performance brake pads and disc brakes with multi-piston calipers that clamp onto oversized vented rotors. Suspension systems are advanced in terms of adjustments and materials for increased stability and durability. Front and rear tires are larger and wider than tires found on other types of motorcycles to allow higher cornering speeds and greater lean angles
+  .col-6.col-s-9
+    img(src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSys-swUnk6xikvSjKIue2PWg7b5KY5tNzn0Vap9e2AmkoCVPEuYQ')
+  .col-6.col-s-9
+    .carousel
+      #myCarousel2.carousel.slide(data-ride='carousel')
+        // Indicators
+        ol.carousel-indicators
+          li.active(data-target='#myCarousel2', data-slide-to='0')
+          li(data-target='#myCarousel2', data-slide-to='1')
+          li(data-target='#myCarousel2', data-slide-to='2')
+        // Wrapper for slides
+        .carousel-inner
+          .item.active
+            img(src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNLt87rYE9giW_LW1cut95AWblF_UQZ3YxQ4pxowfu5if-HIAsYw', alt='Los Angeles', style='width:100%')
+          .item
+            img(src='http://gipsypixel.com/wp-content/uploads/2017/11/New-2017-Picture-Heavy-Bike-Full-Hd-Wallpaper-High-Resolution-Widescreen-For-Laptop-On-Mobile.jpg', alt='Chicago', style='width:100%')
+          .item
+            img(src='http://gipsypixel.com/wp-content/uploads/2017/11/Backgrounds-Of-Bike-Wallpaper-Full-Hd-On-New-2017-Picture-Heavy-Pics-Iphone.jpg', alt='New York', style='width:100%')
+        // Left and right controls
+        a.left.carousel-control(href='#myCarousel2', data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left
+          span.sr-only Previous
+        a.right.carousel-control(href='#myCarousel2', data-slide='next')
+          span.glyphicon.glyphicon-chevron-right
+          span.sr-only Next
+ #aero
+  .carousel
+    #myCarousel3.carousel.slide(data-ride='carousel')
+      // Indicators
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel3', data-slide-to='0')
+        li(data-target='#myCarousel3', data-slide-to='1')
+        li(data-target='#myCarousel3', data-slide-to='2')
+      // Wrapper for slides
+      .carousel-inner
+        .item.active
+          img(src='https://easyflights.net/wp-content/uploads/2017/03/cheap-flights-from-Halifax-to-Freeport-1400x500.jpg', alt='Los Angeles', style='width:100%')
+        .item
+          img(src='https://www.atimetals.com/PublishingImages/aero_home.jpg', alt='Chicago', style='width:100%')
+        .item
+          img(src='https://beabig.org/wp-content/uploads/2018/04/Southwest-Airplane-inFlight-Hero-1400x500.jpg', alt='New York', style='width:100%')
+      // Left and right controls
+      a.left.carousel-control(href='#myCarousel3', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left
+        span.sr-only Previous
+      a.right.carousel-control(href='#myCarousel3', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
+        span.sr-only Next
+ #about.row
+  h2.text-center ABOUT
+  .col-6.col-s-3.menu
+    .matter
+      p
+        strong V&R, Inc.
+        |  (formerly V&R Motors), founded in 2019, is an Indian multinational corporation based in  Hyderabad, Banglore, that specializes in electric vehicles, lithium-ion battery energy storage and solar panel manufacturing (through the subsidiary company SolarCity). As of June 2025, V&R sells the Fire Model S, Model X, Model 3, Powerwall and Powerpack batteries, solar panels, solar roof tiles, and related products.
+  .col-6.col-s-9
+    img(src='https://www.tesla.com/tesla_theme/assets/img/modals/model-select-models.png?20160811')
+ #contact.container-fluid.bg-grey
+  h2.text-center CONTACT
+  .row
+    .col-sm-5
+      p Contact us and we'll get back to you within 24 hours.
+      p
+        span.glyphicon.glyphicon-map-marker
+        |  Chennai, IN
+      p
+        span.glyphicon.glyphicon-phone
+        |  +91 8897712883
+      p
+        span.glyphicon.glyphicon-envelope
+        |  vinaykurmadas@gmail.com
+    .col-sm-7.slideanim
+      .row
+        .col-sm-6.form-group
+          input#name.form-control(name='name', placeholder='Name', type='text', required='')
+        .col-sm-6.form-group
+          input#email.form-control(name='email', placeholder='Email', type='email', required='')
+      textarea#comments.form-control(name='comments', placeholder='Comment', rows='5')
+      br
+      .row
+        .col-sm-12.form-group
+          button.btn.btn-default.pull-right(type='submit') Send
+ footer.flex-rw
+  ul.footer-list-top
+    li
+      h4.footer-list-header About V&R
+    li
+      a.generic-anchor.footer-list-anchor(href='#about', itemprop='significantLink') GET TO KNOW US
+    li
+      a.generic-anchor.footer-list-anchor(href='/promos.html', itemprop='significantLink') PROMOS
+    li
+      a.generic-anchor.footer-list-anchor(href='/retailers/new-retailers.html', itemprop='significantLink') BECOME A RETAILER
+    li
+      a.generic-anchor.footer-list-anchor(href='/job-openings.html', itemprop='significantLink') JOB OPENINGS
+    li
+      a.generic-anchor.footer-list-anchor(href='/shop/about-show-schedule', itemprop='significantLink') EVENTS
+  ul.footer-list-top
+    li
+      h4.footer-list-header Our market features
+    li
+      a.generic-anchor.footer-list-anchor(href='/Angels/cat/id/70') NEW MODELS
+    li
+      a.generic-anchor.footer-list-anchor(href='/Home-Decor/cat/id/64') LATEST BRANDS
+    li
+      a.generic-anchor.footer-list-anchor(href='#cars') CARS
+    li
+      a.generic-anchor.footer-list-anchor(href='#bikes') BIKES
+    li
+      a.generic-anchor.footer-list-anchor(href='#aero') AEROSPACE
+  ul.footer-list-top
+    li#help
+      h4.footer-list-header Please Help Me
+    li
+      a.generic-anchor.footer-list-anchor(href='#contact', itemprop='significantLink') CONTACT
+    li
+      a.generic-anchor.footer-list-anchor(href='/faq.html', itemprop='significantLink') FAQ
+    li#find-a-store
+      a.generic-anchor.footer-list-anchor(href='/shop/store-locator', itemprop='significantLink') STORE LOCATOR
+    li#user-registration
+      a.generic-anchor.footer-list-anchor(href='/shop/user-registration?URL=', itemprop='significantLink') NEW USERS
+    li#order-tracking
+      a.generic-anchor.footer-list-anchor(href='/shop/order-status', itemprop='significantLink') ORDER STATUS
+  section.footer-social-section.flex-rw
+    span.footer-social-overlap.footer-social-connect
+      | CONNECT 
+      span.footer-social-small with
+      |  US
+    span.footer-social-overlap.footer-social-icons-wrapper
+      a.generic-anchor(href='https://www.linkedin.com/in/vinay-kurmadas-2886194b/', target='_blank', title='Linkedin', itemprop='significantLink')
+        i.fa.fa-linkedin
+      a.generic-anchor(href='https://www.facebook.com/paviliongift', target='_blank', title='Facebook', itemprop='significantLink')
+        i.fa.fa-facebook
+      a.generic-anchor(href='https://twitter.com/VINAYGUPTA88977', target='_blank', title='Twitter', itemprop='significantLink')
+        i.fa.fa-twitter
+      a.generic-anchor(href='http://instagram.com/paviliongiftcompany', target='_blank', title='Instagram', itemprop='significantLink')
+        i.fa.fa-instagram
+      a.generic-anchor(href='https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg', target='_blank', title='Youtube', itemprop='significantLink')
+        i.fa.fa-youtube
+      a.generic-anchor(href='https://plus.google.com/+Paviliongift/posts', target='_blank', title='Google Plus', itemprop='significantLink')
+        i.fa.fa-google-plus
+  section.footer-bottom-section.flex-rw
+    .footer-bottom-wrapper
+      i.fa.fa-copyright(role='copyright')
+      |  2018 V&R Groups in 
+      address.footer-address(role='company address') vinaykurmadas, IN
+      span.footer-bottom-rights  - All Rights Reserved - 
+    .footer-bottom-wrapper
+      a.generic-anchor(href='/terms-of-use.html', rel='nofollow') Terms
+      |  
+      a.generic-anchor(href='/privacy-policy.html', rel='nofollow') Privacy
+        
+ .copyright
+  p
+    | Copyright © 2018  
+    a(href='https://www.linkedin.com/in/vinay-kurmadas-2886194b/',target='_blank') Vinay&Harish Group of Techonologies  Ltd.
+    |  All rights reserved.
+
+
+
+
+
+
