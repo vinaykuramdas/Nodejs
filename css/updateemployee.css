@@ -1,0 +1,125 @@
+html,body{
+  height:100%;
+  background-image:url('https://orig00.deviantart.net/20eb/f/2015/030/6/f/_minflat__dark_material_design_wallpaper__4k__by_dakoder-d8fjqzu.jpg');
+  background-size:cover;
+overflow:hidden;
+}
+
+#sel2{
+  width:400px;
+  margin-left:420px;
+}
+
+#usr{
+  margin-top:70px;
+  margin-left:420px;
+  width:250px;
+  border-radius:50px;
+  border:solid 2px #f43222;
+  font-weight:bold;
+}
+
+#check{
+  margin-left:420px;
+   
+}
+
+#check-in{
+  width:250px;
+  border: solid 2px #f43222;
+  padding-top: 5px;
+}
+#check-in1{
+  width:263px;
+  border: solid 2px #f43222;
+  padding-top: 5px;
+}
+#check-in2{
+  width:240px;
+  border: solid 2px #f43222;
+  padding-top: 5px;
+}
+label{
+  margin-left:450px;
+}
+
+
+.btn-wrapper {
+	width: 290px;
+	height: 110px;
+	position: relative;
+	margin: 0px auto 0;
+}
+
+.btn-wrapper:hover .btn-inner {
+	top: -4px;
+	transform: scale(1, 1);
+	cursor: pointer;
+}
+
+.btn-wrapper__container {
+	
+	position: absolute;
+	width: 100%;
+	height: 80px;
+}
+
+.btn-wrapper__container:before, .btn-wrapper__container:after {
+	
+	width: 96%;
+	left: 2%;
+	bottom: -8px;
+	content: "";
+	position: absolute;
+}
+
+.btn-wrapper__container:after {
+	width: 92%;
+	left: 4%;
+	bottom: -14px;
+}
+
+.btn-wrapper__container .btn-inner {
+	width: 104.2%;
+	height: 100%;
+	position: absolute;
+	top: 20px;
+	left: -2.1%;
+	border: 2px solid #15B5E2;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Source Code Pro', monospace;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: 18px;
+	background: #f43222;
+	transform: scale(0.96, 0.96);
+	transition: all .3s;
+	z-index: 4;
+}
+
+.btn-wrapper__container .btn-inner__text {
+	text-decoration: none;
+  display:inline-block;
+	background:transparent;
+  background-color:aliceblue;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background-position: 1% 50%;
+  color: rgba(223,190,106,0.7);
+}
+
+.btn-wrapper__container .btn-inner__text:hover{
+   color: #fff;
+  border: 1px solid rgba(223,190,106,0);
+  color: white;
+  background-position: 99% 50%;
+}
+
+p{
+  color:white;
+  font-style:italic;
+  padding-left:420px;
+}

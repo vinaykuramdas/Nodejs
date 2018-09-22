@@ -1,0 +1,14 @@
+html
+head
+    link(rel='stylesheet', href='style.css',type = 'text/css')
+    title EmployeeDetails
+body
+       if(type == "error")
+        .img
+         h3(style = "color:red") #{message}
+       else
+         .ins
+          h3 New person 
+            name: #{person.name} 
+            age: #{person.age}  
+            nationality: #{person.nationality} added!

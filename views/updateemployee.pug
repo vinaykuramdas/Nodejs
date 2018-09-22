@@ -1,0 +1,80 @@
+html(lang='en')
+  head
+    title update Employee
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='nodejs application')
+    meta(name='keywords', content='HTML,CSS,BOOTSTRAP,JavaScript')
+    meta(name='author', content='Vinay kurmadas')
+    link(rel='icon' src='favicon.jpg' type='image/jpg' sizes='16x16')
+    link(rel='stylesheet', href='updateemployee.css',type = 'text/css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script.
+      function confirmbox(){
+      var log = confirm("Are you sure want to update?");
+      if(log){
+        window.location='/update';
+      return true;
+      }else{
+      return false;
+      }
+      }
+      $(document).ready(function(){
+        $('.check1').click(function () {
+       if ($('.check1').is(':checked')) {
+       $('.txt').val(this.name);
+       }
+       else{
+       $('.txt').val('');
+       }
+       });
+      $('.check2').click(function () {
+      if ($('.check2').is(':checked')) {
+      $('.txt1').val(this.age);
+      }
+      else{
+      $('.txt1').val('');
+      }
+      });
+      $('.check3').click(function () {
+      if ($('.check3').is(':checked')) {
+      $('.txt2').val(this.nation);
+      }
+      else{
+      $('.txt2').val('');
+      }
+      });
+        });
+  body
+    #box.container
+      form(action='/update', method='POST')
+        input#usr(type='text', placeholder='type for Employeeid..', name='id',required='required')
+        br
+        br
+        p Select the checkboxes to update parameters
+        #check.input-group
+          span.input-group-addon
+            input.check1(type='checkbox', aria-label='...')
+            | NAME
+          input#check-in.txt(type='text', placeholder='type name here to update..', name='name')
+        br
+        #check.input-group
+          span.input-group-addon
+            input.check2(type='checkbox', aria-label='...')
+            | AGE
+          input#check-in1.txt1(type='number', placeholder='type age here to update..', name='age')
+        br
+        #check.input-group
+          span.input-group-addon
+            input.check3(type='checkbox', aria-label='...')
+            | NATION
+          input#check-in2.txt2(type='text', placeholder='type nation here to update..', name='nation')
+        br
+        br
+        .btn-wrapper
+         .btn-wrapper__container
+           .btn-inner
+             button.btn-inner__text(type='submit',onclick='return confirmbox()') Update
+

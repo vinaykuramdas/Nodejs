@@ -1,0 +1,29 @@
+html
+  head
+     base(href="/")
+     link(rel='stylesheet', href='style.css',type = 'text/css')
+     title Vinay_Page
+  body
+    form(action = "/insertingemployee", method = "POST")
+        .box1 
+         h1 Welcome to Vinay's page
+         .class1
+           div#nam
+            label#name(for = "name") Name: 
+            input#namei(name = "name",required='required')
+           br
+           div#id
+            label#id(for = "id") EmployeeId: 
+            input#idi(name = "id",required='required')
+           br
+           div
+             label#age(for = "age") Age: 
+             input#agei(name = "age",required='required')
+           br
+           div
+             label#nat(for = "nationality") Nationality: 
+             input#nati(name = "nationality",required='required')
+           br
+           button#button(type = "submit") Create new person
+    P#copyright |Copyright &copy; 2018 <a href="http://www.enoughpepper.com">Vinay Kurmadas</a>. All rights reserved.
+       

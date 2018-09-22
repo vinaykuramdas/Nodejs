@@ -1,0 +1,32 @@
+html
+  head
+    link(rel='stylesheet', href='login.css',type = 'text/css')
+    link(rel="icon" src="favicon.jpg" type="image/jpg" sizes="16x16")
+    title Login
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script.
+      $(document).ready(function(){
+      $('input[type="password"]').on('focus', () => {
+      $('*').addClass('password');
+      }).on('focusout', () => {
+      $('*').removeClass('password');
+      });;
+      });
+  body
+   form(action = "/homepage", method = "POST")
+    .owl
+      .hand
+      .hand.hand-r
+      .arms
+        .arm
+        .arm.arm-r
+    .form
+      .control
+        label.fa.fa-envelope(for='email')
+        input#email(placeholder='Email',name="username", type='email',required='required')
+      .control
+        label.fa.fa-asterisk(for='password')
+        input#password(placeholder='Password',name="password", type='password',required='required')
+      button.btn Login   
+   a.forgotpassword(href="") Forgot Password?  
+  P#copyright Copyright &copy; 2018 <a href="https://www.linkedin.com/in/vinay-kurmadas-2886194b/">Vinay Kurmadas</a>. All rights reserved. 
